@@ -5,7 +5,8 @@ import { serviceOptions } from '../data/content';
 
 const initial = { name: '', email: '', phone: '', country: '', city: '', service: serviceOptions[0], description: '', website: '' };
 
-export default function Contact() {
+export default function Contact({ heading = 'h2' }) {
+  const H = heading;
   const [form, setForm] = useState(initial);
   const [status, setStatus] = useState('idle'); // idle | sending | sent | invalid | error
 
@@ -37,7 +38,7 @@ export default function Contact() {
       <div className="wrap contact__grid">
         <div className="contact__copy">
           <span className="eyebrow gold">LET'S BEGIN</span>
-          <h2>Your Time Is Valuable.<br />Let Us Handle India.</h2>
+          <H>Your Time Is Valuable.<br />Let Us Handle India.</H>
           <p>Get a clear quote for your requirement — no obligation, no pressure, and full confidentiality assured under advocate-client privilege.</p>
           <div className="cbtns">
             <a className="cbtn cbtn--wa" href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener noreferrer">WhatsApp Us</a>

@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   // Bundle CJS-only deps into the SSR build so Node can import it
-  ssr: { noExternal: ['react-helmet-async'] },
+  ssr: { noExternal: ["react-helmet-async", "react-router-dom", "react-router", "@remix-run/router"] },
 });

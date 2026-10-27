@@ -1,36 +1,31 @@
-import Seo from './components/Seo';
-import TopBar from './components/TopBar';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import WhyUs from './components/WhyUs';
-import Process from './components/Process';
-import Stats from './components/Stats';
-import Reviews from './components/Reviews';
-import Faq from './components/Faq';
-import Promise from './components/Promise';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import ServicesIndex from './pages/ServicesIndex';
+import ServicePage from './pages/ServicePage';
+import LocationPage from './pages/LocationPage';
+import WhyUsPage from './pages/WhyUsPage';
+import ProcessPage from './pages/ProcessPage';
+import FaqPage from './pages/FaqPage';
+import ContactPage from './pages/ContactPage';
+import NotFound from './pages/NotFound';
 import './styles/main.css';
+import './styles/pages.css';
 
 export default function App() {
   return (
-    <>
-      <Seo />
-      <TopBar />
-      <Header />
-      <main id="main">
-        <Hero />
-        <Services />
-        <WhyUs />
-        <Process />
-        <Stats />
-        <Reviews />
-        <Faq />
-        <Promise />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="services" element={<ServicesIndex />} />
+        <Route path="services/:slug" element={<ServicePage />} />
+        <Route path="locations/:slug" element={<LocationPage />} />
+        <Route path="why-us" element={<WhyUsPage />} />
+        <Route path="process" element={<ProcessPage />} />
+        <Route path="faq" element={<FaqPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 }

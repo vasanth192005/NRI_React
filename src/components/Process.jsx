@@ -1,7 +1,8 @@
 import { useRef } from 'react';
 import { steps } from '../data/content';
 
-export default function Process() {
+export default function Process({ heading = 'h2' }) {
+  const H = heading;
   const track = useRef(null);
   const scroll = (dir) => track.current?.scrollBy({ left: dir * 320, behavior: 'smooth' });
 
@@ -11,7 +12,7 @@ export default function Process() {
         <div className="process__head">
           <div>
             <span className="eyebrow">STRUCTURED EXECUTION</span>
-            <h2 className="serif">A Clear Process, Start to Finish</h2>
+            <H className="serif">A Clear Process, Start to Finish</H>
             <p>From your initial consultation to registered deed possession in 7 transparent phases.</p>
           </div>
           <div className="arrows">

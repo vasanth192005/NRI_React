@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Icon from './Icon';
 
 export default function TopBar() {
@@ -6,7 +7,7 @@ export default function TopBar() {
       <div className="wrap topbar__in">
         <p className="topbar__left">
           <span className="dot"></span>Cross-Border Legal Advisory Active:{' '}
-          <a href="#contact">Tamilnadu ,Bangalore NRI Desks</a>
+          <Link to="/contact/">Tamilnadu ,Bangalore NRI Desks</Link>
         </p>
         <p className="topbar__right">
           <span><Icon name="clock" size={15} />24–48 Hr Document Turnaround</span>

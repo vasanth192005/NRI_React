@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Icon from './Icon';
 
 export default function Hero() {
@@ -9,8 +10,8 @@ export default function Hero() {
           <h1>You live abroad.<br />We take care of India.</h1>
           <p className="hero__lead">Trusted NRI Legal, Documentation &amp; Tax Support handled entirely from India, so you don't have to be physically present.</p>
           <div className="hero__btns">
-            <a className="btn btn--navy" href="#contact">Get a Free Consultation <span className="gold">→</span></a>
-            <a className="btn btn--white" href="#contact">Talk to an Expert</a>
+            <Link className="btn btn--navy" to="/contact/">Get a Free Consultation <span className="gold">→</span></Link>
+            <Link className="btn btn--white" to="/services/">Explore Services</Link>
           </div>
           <div className="note">
             <Icon name="info" size={18} />

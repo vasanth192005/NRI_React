@@ -10,8 +10,18 @@
 Upload the **contents** of `dist/client/` to `public_html/` (includes `.htaccess`, `api/`, `robots.txt`, `sitemap.xml`).
 Delete the old PHP files (`index.php`, `submit.php`, `inc/`, `config.php`, old `.htaccess`).
 
+## Pages (each is a real prerendered URL with its own title, description, canonical, OG and JSON-LD)
+- `/`  Home
+- `/services/` + 6 service pages in `/services/<slug>/` (content: `src/data/services.js`)
+- `/locations/bangalore/`, `/locations/chennai/`
+- `/why-us/`, `/process/`, `/faq/`, `/contact/`
+- `404.html` (noindex)
+
+Add a new service or city by adding an entry to `src/data/services.js`; it is routed, prerendered and added to the sitemap automatically.
+
 ## SEO included
-- Prerendered HTML at build time (crawlers see full content without running JS)
+- One prerendered HTML file per page (crawlers see full content without running JS)
+- Unique title/description/canonical per page, BreadcrumbList, Service and FAQPage schema
 - Title, meta description, keywords, canonical, robots
 - Open Graph + Twitter cards
 - JSON-LD: LegalService, WebSite, FAQPage

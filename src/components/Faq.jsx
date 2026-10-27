@@ -2,13 +2,14 @@ import { useState } from 'react';
 import Icon from './Icon';
 import { faqs } from '../data/content';
 
-export default function Faq() {
+export default function Faq({ heading = 'h2' }) {
+  const H = heading;
   const [open, setOpen] = useState(null);
   return (
     <section id="faq" className="section section--cream faq">
       <div className="wrap faq__in">
         <span className="eyebrow">LEGAL CLARITY</span>
-        <h2 className="serif">Frequently Asked Questions</h2>
+        <H className="serif">Frequently Asked Questions</H>
         <div className="faq__list">
           {faqs.map(([q, a], i) => (
             <div className="qa" key={q}>

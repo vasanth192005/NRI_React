@@ -1,6 +1,7 @@
-# Static React build on Apache/PHP hosting
+# Static prerendered React build on Apache/PHP hosting
 Options -Indexes
 DirectoryIndex index.html
+ErrorDocument 404 /404.html
 
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json application/ld+json image/svg+xml text/xml application/xml
@@ -20,9 +21,5 @@ DirectoryIndex index.html
   # Force HTTPS
   RewriteCond %{HTTPS} off
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-  # SPA fallback (leave real files, dirs and /api alone)
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_URI} !^/api/
-  RewriteRule . /index.html [L]
+  # Every page is a real prerendered folder (/services/ etc). Unknown URLs get a true 404.
 </IfModule>

@@ -1,12 +1,13 @@
 import Icon from './Icon';
 import { why } from '../data/content';
 
-export default function WhyUs() {
+export default function WhyUs({ heading = 'h2' }) {
+  const H = heading;
   return (
     <section id="why-us" className="section section--navy">
       <div className="wrap">
         <span className="pill pill--mint">WHY NRI</span>
-        <h2 className="h-center light">Because Distance Shouldn't Make India Complicated.</h2>
+        <H className="h-center light">Because Distance Shouldn't Make India Complicated.</H>
         <p className="sub-center light">Designed specifically to solve timezone mismatches, bureaucratic friction, and untraceable payments.</p>
         <div className="why-grid">
           {why.map(([icon, title, text]) => (
