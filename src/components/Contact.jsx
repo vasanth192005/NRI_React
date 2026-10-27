@@ -63,9 +63,9 @@ export default function Contact({ heading = 'h2' }) {
             <div className="fgrid">
               <label>NAME *<input type="text" name="name" placeholder="Full name" required value={form.name} onChange={set('name')} /></label>
               <label>EMAIL *<input type="email" name="email" placeholder="your@email.com" required value={form.email} onChange={set('email')} /></label>
-              <label>PHONE NUMBER (WITH COUNTRY CODE) *<input type="tel" name="phone" placeholder="+1 (555) 000-0000" required value={form.phone} onChange={set('phone')} /></label>
+              <label>PHONE NUMBER (WITH COUNTRY CODE) *<input type="tel" name="phone" placeholder="+91 9876543210" required value={form.phone} onChange={set('phone')} /></label>
               <label>COUNTRY OF RESIDENCE *<input type="text" name="country" required value={form.country} onChange={set('country')} /></label>
-              <label>CITY IN INDIA (PROPERTY / REGISTRY LOCATION)<input type="text" name="city" placeholder="e.g.Bengaluru / Tamilnadu/Mumbai" value={form.city} onChange={set('city')} /></label>
+              <label>CITY IN INDIA (PROPERTY / REGISTRY LOCATION)<input type="text" name="city" placeholder="e.g.Bengaluru/Tamilnadu/Mumbai" value={form.city} onChange={set('city')} /></label>
               <label>REQUIRED SERVICE
                 <select name="service" value={form.service} onChange={set('service')}>
                   {serviceOptions.map((o) => <option key={o}>{o}</option>)}

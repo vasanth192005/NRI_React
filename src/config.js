@@ -2,8 +2,8 @@
 export const SITE = {
   name: 'Bharath NRI Property',
   url: 'https://nripropertyregistration.com', // no trailing slash
-  whatsapp: '919999999999', // country code + number, no + or spaces
-  email: 'info@nripropertyregistration.com',
+  whatsapp: '+91 98428 36642', // country code + number, no + or spaces
+  email: 'nriproperty1987@gmail.com',
   communityUrl: '#',
   description:
     'Trusted NRI legal, documentation and tax support handled entirely from India — property registration, POA, wills and 15CA/15CB.',

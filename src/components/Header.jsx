@@ -18,7 +18,7 @@ export default function Header() {
         <Link className="brand" to="/">
           <img src="/assets/img/logo-mark.png" width="44" height="46" alt="Bharath NRI Property logo" />
           <span className="brand__txt">
-            <strong>BHARATH NRI Test <em>Property</em></strong>
+            <strong>BHARATH NRI <em>Property</em></strong>
             <small>REGISTRATION &amp; LEGAL</small>
           </span>
         </Link>
